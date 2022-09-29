@@ -12,6 +12,13 @@
     "pretty:check": "prettier --config ./.prettierrc --check \"./**/*.{ts,js,tsx,json,css,scss,html}\"",
     "postinstall": "husky install"
   },
+  "lint-staged": {
+    "src/**/*": [
+      "npm run lint",
+      "npm run pretty:format",
+      "git add ."
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/davifsroberto/sospet_web"
