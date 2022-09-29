@@ -8,14 +8,15 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "lint:fix": "ng lint --fix --max-warnings=0",
+    "lint:fix": "ng lint --fix",
     "pretty:format": "prettier --config ./.prettierrc --write \"./**/*.{ts,js,tsx,json,css,scss,html}\"",
     "pretty:check": "prettier --config ./.prettierrc --check \"./**/*.{ts,js,tsx,json,css,scss,html}\"",
     "postinstall": "husky install"
   },
   "lint-staged": {
     "src/**/*": [
-      "npm run pretty:format"
+      "npm run pretty:format",
+      "git add ."
     ]
   },
   "repository": {
