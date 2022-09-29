@@ -8,7 +8,5 @@ const routes: Routes = [];
   exports: [RouterModule],
 })
 export class AppRoutingModule {
-  constructor() {
-    console.log('teste');
-  }
+  constructor() {}
 }
