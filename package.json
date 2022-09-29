@@ -9,12 +9,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "pretty:format": "prettier --config ./.prettierrc --write \"./**/*.{ts,js,tsx,json,css,scss,html}\"",
-    "pretty:check": "prettier --config ./.prettierrc --check \"./**/*.{ts,js,tsx,json,css,scss,html}\"",
+    "pretty:format": "prettier --config ./.prettierrc --write",
+    "pretty:check": "prettier --config ./.prettierrc --check \"./**/*.{ts,json,css,scss,html}\"",
     "postinstall": "husky install"
   },
   "lint-staged": {
-    "src/**/*": [
+    "**/*.{ts,json,html,css,scss}": [
       "npm run pretty:format",
       "git add ."
     ]
