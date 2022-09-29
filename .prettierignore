@@ -1,0 +1,9 @@
+.angular
+.husky
+coverage
+*.yml
+build
+coverage
+e2e
+node_modules
+.vscode/*
