@@ -10,7 +10,6 @@
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "pretty:format": "prettier --config ./.prettierrc --write",
-    "pretty:check": "prettier --config ./.prettierrc --check \"./**/*.{ts,json,css,scss,html}\"",
     "postinstall": "husky install"
   },
   "lint-staged": {
