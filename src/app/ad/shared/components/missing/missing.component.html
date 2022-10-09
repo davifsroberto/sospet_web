@@ -1,0 +1,36 @@
+<section [formGroup]="missingFormGroup">
+  <!-- <app-input [inputFormControl]="emailFormControl"></app-input> -->
+
+  <section *ngFor="let input of formInputs">
+    <div [ngSwitch]="input.type">
+      <section *ngSwitchCase="'select'">
+        <mat-form-field appearance="fill">
+          <mat-label>{{ input.displayName }}</mat-label>
+
+          <mat-select>
+            <mat-option
+              *ngFor="let option of input.optionsSelect"
+              [value]="option.value">
+              {{ option.desc }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </section>
+
+      <section *ngSwitchDefault>
+        <mat-form-field appearance="fill">
+          <mat-label>{{ input.displayName }}</mat-label>
+
+          <input
+            [formControlName]="input.name"
+            [type]="input.type"
+            [placeholder]="input.placeholder ?? ''"
+            matInput />
+
+          <mat-error
+            [innerHTML]="displayMessage[input.errorMessage ?? '']"></mat-error>
+        </mat-form-field>
+      </section>
+    </div>
+  </section>
+</section>

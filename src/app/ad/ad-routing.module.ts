@@ -24,7 +24,7 @@ const adRoutingConfig: Routes = [
       },
 
       {
-        path: 'create',
+        path: 'create/:id',
         component: AdCreateComponent,
       },
     ],

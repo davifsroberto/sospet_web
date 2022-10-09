@@ -1,0 +1,11 @@
+<main>
+  <h1>{{ adType }}</h1>
+
+  <app-ad-missing *ngIf="adType === 'missing'"></app-ad-missing>
+  <app-ad-found *ngIf="adType === 'found'"></app-ad-found>
+  <app-ad-donation *ngIf="adType === 'donation'"></app-ad-donation>
+
+  <app-ower-form></app-ower-form>
+
+  <app-address-form> </app-address-form>
+</main>
